@@ -1,0 +1,49 @@
+<!doctype html>
+<head>
+  <title>Hue App</title>
+  <script src="../lib/jquery-3.3.1.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body onload="onLoad()">
+  <div id="container">
+   <h1>Hue App</h1>
+   Choose Room:
+   <select id="roomSelect" onchange="changeRoom()">
+     <option value="guestRoom">Guest Room</option>
+     <option value="livingRoom">Living Room</option>
+   </select>
+   <br><br>
+   Lights:
+   <label class="switch">
+     <input id="guestToggle" type="checkbox" onclick="toggle(this.checked)">
+     <span class="switch-slider"></span>
+   </label>
+   <br><br>
+   Choose Color:
+   <input id="colorpicker" type="color" value="#ffffff" ></input>
+   <br><br>
+   <button onclick="changeColor($('#colorpicker').val())">Change Color</button>
+   <!-- <div class="range-slider">
+     <input class="range-slider__range" type="range" value="100" min="0" max="500">
+     <span class="range-slider__value">0</span>
+   </div> -->
+   <div class="range-slider-wrapper">
+     <input type="range" oninput="document.getElementById('guestBrightnessText').textContent = this.value + '%';"
+      class="range-slider" id="guestBrightnessSlider" onchange="changeBrightness(this.value)" min="1" max="100" value="50"></input>
+     <div class="range-slider-text-pointer"></div>
+     <span class="range-slider-text" id="guestBrightnessText"></span>
+   </div>
+   <!-- <style>
+
+   </style>
+   <br> -->
+   <!-- <input type="range" id="guestBrightnessSlider" min="1" max="100" value="100"></input>
+   <button onclick="changeBrightness($('#guestBrightnessSlider').val(), 'guestRoom')">Change Brightness</button> -->
+   <!-- <br><br>
+   Living
+   <button id="off" onclick="toggle(false)">off</button>
+   <button id="on" onclick="toggle(true)">on</button> -->
+  </div>
+</body>
