@@ -1,0 +1,27 @@
+{
+  "name": "philips-hue-app",
+  "version": "1.0.0",
+  "description": "A Philips Hue web application that allows a user to interact with their Philips Hue system.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/cluster.js",
+    "start:dev": "node server/cluster.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikramraja1995/Philips-Hue-App.git"
+  },
+  "author": "Vikram Raja",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/vikramraja1995/Philips-Hue-App/issues"
+  },
+  "homepage": "https://github.com/vikramraja1995/Philips-Hue-App#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
